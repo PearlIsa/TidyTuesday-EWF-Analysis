@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Load necessary libraries
 library(shiny)
 library(tidyverse)
@@ -128,3 +129,6 @@ server <- function(input, output, session) {
 
 # Run the app
 shinyApp(ui, server)
+=======
+
+>>>>>>> ef5ee31670bc7f027a932e0edd2564a59d868322

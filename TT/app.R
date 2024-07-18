@@ -7,6 +7,7 @@ library(here)
 library(gganimate)
 library(gifski)
 
+<<<<<<< HEAD
 # Create necessary directories
 if (!dir.exists("www")) {
   dir.create("www")
@@ -14,6 +15,12 @@ if (!dir.exists("www")) {
 if (!dir.exists("images")) {
   dir.create("images")
 }
+=======
+# Create the 'www' directory if it doesn't exist
+if (!dir.exists("www")) {
+  dir.create("www")
+}
+>>>>>>> ef5ee31670bc7f027a932e0edd2564a59d868322
 
 # Load the datasets using relative paths
 matches <- read_csv(here("data", "ewf_matches.csv"))
@@ -43,6 +50,7 @@ promotion_relegation <- standings %>%
   group_by(season, season_outcome) %>%
   summarise(count = n())
 
+<<<<<<< HEAD
 # Function to save plots
 save_plot <- function(plot, filename) {
   ggsave(filename, plot, width = 10, height = 6)
@@ -106,6 +114,8 @@ save_team_plots <- function(team_name) {
 unique_teams <- unique(standings$team_name)
 lapply(unique_teams, save_team_plots)
 
+=======
+>>>>>>> ef5ee31670bc7f027a932e0edd2564a59d868322
 # Create the UI
 ui <- fluidPage(
   titlePanel("English Women's Football Analysis"),
